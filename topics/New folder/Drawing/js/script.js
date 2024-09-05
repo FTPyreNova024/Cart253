@@ -1,25 +1,46 @@
 /**
- * Title of Project
- * Author Name
+ * Drawing module
+ * Daniel Munoz C
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Module where drawing will be learned
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
+ * Creates a square cannvas
+ */
 function setup() {
-    createCanvas(640, 640)
+    //Creates canvas for this module
+    createCanvas(640, 640);
 
 }
 
-
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
-*/
+ * Creates the record
+ */
 function draw() {
+    //Gray background
+    background(150);
+    
+    //Main Part of the record
+    push();
+    fill(255, 0, 0);
+    stroke(255);
+    ellipse(320, 320, 480);
+    pop();
 
+    //The label of the record
+    push();
+    fill(255);
+    noStroke();
+    ellipse(320, 320, 140, 140)
+    pop();
+
+    //The hole of the record
+    push();
+    fill(0);
+    noStroke();
+    ellipse(320, 320, 20)
+    pop();
 }
