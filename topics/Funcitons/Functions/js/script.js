@@ -1,16 +1,12 @@
 /**
- * Title of Project
- * Author Name
+ * Function calls
+ * Daniel Munoz C
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * The functions homework
  */
 
 "use strict";
 
-/**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
 function setup() {
 
 }
