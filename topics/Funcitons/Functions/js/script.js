@@ -1,20 +1,32 @@
 /**
- * Function calls
+ * The Blank page
  * Daniel Munoz C
  * 
- * The functions homework
+ * An exploration of the existantial angst of a novelist
+ * who must sit down at their pink desk and confront the 
+ * abyss  that is a blank page of paper.
+ * 
+ * The program is non-interactive to convey the inability
+ * to get started on a project. try typing, just try it!
  */
 
 "use strict";
 
+
+/**
+ * creates a canvas for our master piece.
+ */
 function setup() {
-    // Once at the beggining of our program
+    // create a canvas at a standard resolition
     createCanvas(640, 480);
 }
 
-
+/**
+ * draws the writer's desktop and a blank piece of paper
+ */
 function draw() {
-    // Every frame
+    // a pink desktop
     background(255, 100, 100);
-    rect(0, 0, 213, 480);
+    // a blank piece of paper
+    rect(200, 80, 240, 320);
 }
