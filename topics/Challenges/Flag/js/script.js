@@ -54,13 +54,29 @@ function drawWhite() {
      pop();
 }
 
+const brown = [110, 70, 37];
+
+const gold = [230, 181, 46];
+
+const nopal = [31, 125, 108];
+
+const snake = [188, 207, 70];
+
+const olivo = [71, 148, 72];
+
+const sand = [191, 176, 80];
+
+const lake = [68, 171, 167];
+
 //draws the eagle of the flag
 function drawEagle() {
     push();
-    fill(110, 70, 37);
+    fill(brown);
     noStroke();
     ellipse(500, 500, 50)
     pop();
+
+    drawEagleBody();
 }
 
 //draws the red side of the flag
@@ -74,3 +90,32 @@ function drawRed() {
     pop();
 }
 
+/**
+ * All the body parts of the eagle
+ */
+function drawEagleBody() {
+    
+    //I dont want any strokes in this sections
+    noStroke();
+
+    push();
+    fill(brown);
+    quad(475, 500, 500, 465, 530, 460, 525, 500);
+    quad(500, 465, 500, 460, 510, 440, 530, 460);
+    ellipse(500, 450, 30)
+    pop();
+
+    //the beak of the eagle
+    drawBeak();
+
+}
+
+function drawBeak() {
+    
+    noStroke();
+
+    push();
+    fill(gold);
+    quad(460, 435, );
+    pop();
+}
