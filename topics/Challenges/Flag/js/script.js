@@ -16,6 +16,15 @@ function setup() {
     createCanvas(1000, 1000);
 }
 
+function test() {
+    
+    push();
+    fill(brown);
+    noStroke();
+    arc(500, 500, 300, 300, 0, PI + HALF_PI, PIE);
+    pop(); 
+}
+
 /**
  * sets the color of the background and the flag
  */
@@ -68,13 +77,10 @@ const sand = [191, 176, 80];
 
 const lake = [68, 171, 167];
 
+const blank = [255, 255, 255];
+
 //draws the eagle of the flag
 function drawEagle() {
-    push();
-    fill(brown);
-    noStroke();
-    ellipse(500, 500, 50)
-    pop();
 
     drawEagleBody();
 }
@@ -95,27 +101,48 @@ function drawRed() {
  */
 function drawEagleBody() {
     
-    //I dont want any strokes in this sections
-    noStroke();
+    //the brown parts of the eagle
+    drawBrown();
 
-    push();
-    fill(brown);
-    quad(475, 500, 500, 465, 530, 460, 525, 500);
-    quad(500, 465, 500, 460, 510, 440, 530, 460);
-    ellipse(500, 450, 30)
-    pop();
-
-    //the beak of the eagle
-    drawBeak();
+    //the gold parts of the eagle
+    drawGold();
 
 }
+function drawBrown() {
 
-function drawBeak() {
+        //I dont want any strokes in this sections
+        noStroke();
+
+        push();
+        fill(brown);
+        ellipse(500, 500, 50)
+        quad(475, 500, 500, 465, 530, 460, 525, 500);
+        quad(500, 465, 500, 460, 510, 440, 530, 460);
+        ellipse(500, 450, 30)
+        triangle(495, 436, 520, 427, 500, 470)
+        quad(525, 500, 490, 523, 520, 540, 530, 520);
+        quad(530, 520, 520, 540, 530, 560, 560, 530);
+        ellipse(500, 530, 20, 50);
+        ellipse(490, 520, 50, 20);
+        
+        pop();
+}
+
+function drawGold() {
     
     noStroke();
 
     push();
     fill(gold);
-    quad(460, 435, );
+    quad(470, 455, 486, 445, 489, 460, 460, 470);
+    ellipse(500, 555, 20);
+    ellipse(460, 520, 20);
+    pop();
+
+    push();
+    noStroke();
+    fill(blank);
+    ellipse(500, 560, 15);
+    ellipse(455, 520, 15);
     pop();
 }
