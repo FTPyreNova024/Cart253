@@ -22,7 +22,11 @@ function setup() {
 function draw() {
     background(255, 242, 0);
 
-    /**
+    drawChain();
+}
+
+function drawChain() {
+        /**
      * The main chain
      */
 
@@ -44,4 +48,5 @@ function drawChainLink() {
     pop();
 }
 }
+
 
