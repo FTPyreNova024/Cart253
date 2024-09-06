@@ -14,15 +14,7 @@
  */
 function setup() {
     createCanvas(1000, 1000);
-}
 
-function test() {
-    
-    push();
-    fill(brown);
-    noStroke();
-    arc(500, 500, 300, 300, 0, PI + HALF_PI, PIE);
-    pop(); 
 }
 
 /**
@@ -37,6 +29,8 @@ function draw() {
     drawWhite();
 
     drawEagle();
+
+    drawNopal();
 
     drawRed();
 }
@@ -124,7 +118,14 @@ function drawBrown() {
         quad(530, 520, 520, 540, 530, 560, 560, 530);
         ellipse(500, 530, 20, 50);
         ellipse(490, 520, 50, 20);
-        
+        quad(525, 490, 540, 460, 540, 490, 525, 500);
+        pop();
+
+        push();
+        angleMode(DEGREES);
+        fill(brown);
+        noStroke();
+        arc(540, 490, 130, 130, 260, 30, PIE);
         pop();
 }
 
@@ -142,7 +143,20 @@ function drawGold() {
     push();
     noStroke();
     fill(blank);
-    ellipse(500, 560, 15);
     ellipse(455, 520, 15);
+    pop();
+}
+
+function drawNopal() {
+
+    push();
+    fill(nopal);
+    noStroke();
+    ellipse(500, 560, 15);
+    ellipse(475, 560, 40, 15);
+    ellipse(455, 550, 30, 15);
+    ellipse(440, 540, 20, 15);
+    ellipse(520, 565, 30, 15);
+    quad(500, 565, 496, 565, 490, 590, 480, 580, 600);
     pop();
 }
