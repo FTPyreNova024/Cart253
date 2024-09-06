@@ -32,15 +32,15 @@ let x = 0;
 do { 
     i = i + 1;
     drawChainLink();
-    x = x + 200;
-} while (i <= 5);
+    x = x + 250;
+} while (i < 5);
 
 function drawChainLink() {
     push();
     noFill();
     stroke(0);
-    strokeWeight(40)
-    ellipse(500, x, 200, 300);
+    strokeWeight(55)
+    ellipse(500, x,275, 375);
     pop();
 }
 }
