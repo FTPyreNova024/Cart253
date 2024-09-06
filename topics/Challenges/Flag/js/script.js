@@ -27,6 +27,8 @@ function draw() {
 
     drawWhite();
 
+    drawEagle();
+
     drawRed();
 }
 
@@ -37,7 +39,7 @@ function drawGreen() {
     push();
     fill(37, 110, 47)
     noStroke()
-    rect(150, 250, 230, 550)
+    rect(150, 250, 230, 500)
     pop();
 }
 
@@ -48,8 +50,17 @@ function drawWhite() {
      push();
      fill(255, 255, 255);
      noStroke();
-     rect(380, 250, 230, 550 );
+     rect(380, 250, 230, 500 );
      pop();
+}
+
+//draws the eagle of the flag
+function drawEagle() {
+    push();
+    fill(110, 70, 37);
+    noStroke();
+    ellipse(500, 500, 50)
+    pop();
 }
 
 //draws the red side of the flag
@@ -59,7 +70,7 @@ function drawRed() {
     push();
     fill(255, 0 ,0);
     noStroke();
-    rect(610, 250, 230, 550)
+    rect(610, 250, 230, 500)
     pop();
 }
 
