@@ -1,10 +1,8 @@
 /**
- * Started house
- * Pippin Barr
+ * Pyramid
+ * Daniel Munoz C
  * 
- * Draws a house with shapes.
- * 
- * Disclaimer: Not actually my house.
+ * Draws a pyramid with shapes.
  * 
  * Uses:
  * p5.js
@@ -15,116 +13,98 @@
  * Creates the canvas
  */
 function setup() {
-    createCanvas(640, 480);
+    createCanvas(1000, 1000);
 }
 
 /**
- * Draws a house and the immediate environment
+ * sets the background and the scene
  */
 function draw() {
+    background(65, 199, 232);
 
-    // The sky
-    background(150, 200, 250);
+    drawFullSand();
 
-    drawCloud();
-
-    drawGround();
-
-    drawHouse();
+    drawPyramid();
 }
 
-//draws a cloud
-function drawCloud() {
 
-    // A cloud
+/**
+ * Creates the sand section
+ */
+function drawFullSand() {
+
+    drawSand1();
+
+    drawSand2();
+
+    drawSand3();
+}
+
+
+// I am gonna divide the sand in three sections
+ 
+
+/**
+ * Section one of the sand
+ */
+function drawSand1() {
     push();
+    fill(232, 168, 65);
     noStroke();
-    // Note: using a single number for a colour will be greyscale
-    // (As if you used the same number for R, G, and B)
-    // So this is white:
-    fill(255);
-    ellipse(100, 100, 100, 100);
-    ellipse(180, 80, 100, 100);
-    ellipse(160, 120, 60, 60);
-    ellipse(190, 130, 60, 60);
-    ellipse(220, 120, 60, 60);
+    quad(0, 700, 1000, 700, 1000, 1000, 0, 1000);
     pop();
 }
 
-//draws the ground
-function drawGround() {
-
-     // The ground
-     push();
-     noStroke();
-     fill(200);
-     rect(0, 400, 640, 480);
-     pop();
-}
-
-//draws the house
-function drawHouse() {
-
-    drawHouseRoof();
-
-    drawHouseBody();
-
-    drawHouseWindow();
-
-    drawDoor();
-}
-
-//Draws the roof
-function drawHouseRoof() {
-
-    // The main body of the house
+/**
+ * Section two of the sand
+ */
+function drawSand2() {
     push();
+    fill(232, 168, 65);
     noStroke();
-    fill(250, 250, 200);
-    rect(200, 240, 280, 180);
+    ellipse(500, 700, 1100, 400);
     pop();
 }
 
-//Draws the body of the house
-function drawHouseBody() {
-
-    // The roof
+/**
+ * Section three of the sand
+ */
+function drawSand3() {
     push();
+    fill(232, 168, 65);
     noStroke();
-    // You can also write colors in hex code in quote marks
-    fill("#dc143c");
-    triangle(180, 240, 340, 120, 500, 240);
+    ellipse(0, 700, 900, 600);
     pop();
 }
 
-//Draws the window of the house
-function drawHouseWindow() {
+/**
+ * The pyramid
+ */
+function drawPyramid() {
+    drawPyramid1();
 
-    // A window
-    push();
-    // You can also write colour names from the CSS standard in quotes
-    // https://www.w3.org/wiki/CSS/Properties/color/keywords
-    stroke("deeppink");
-    strokeWeight(5);
-    fill("blanchedalmond");
-    rect(220, 260, 80, 80);
-    pop();
+    drawPyramid2();
 }
 
-//Draws the door
-function drawDoor() {
-
-    // The door
+/**
+ * Right side of the pyramid
+ */
+function drawPyramid1() {
     push();
+    fill(150, 132, 68);
     noStroke();
-    fill(0, 128, 0);
-    rect(320, 300, 80, 120);
-    pop();
-
-    // The doorknob
-    push();
-    noStroke();
-    fill(255, 215, 0);
-    ellipse(340, 360, 10, 10);
+    triangle(500, 750, 675, 600, 450, 300 );
     pop();
 }
+
+/**
+ * Left side of the pyramid
+ */
+function drawPyramid2() {
+    push();
+    fill(227, 206, 132);
+    noStroke();
+    triangle(500, 750, 200, 625, 450, 300 );
+    pop();
+}
+
