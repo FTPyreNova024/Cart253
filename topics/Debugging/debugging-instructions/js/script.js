@@ -11,7 +11,7 @@
 
 /**
  * Creates the canvas
-*/
+ */
 function setup() {
     createCanvas(500, 500);
 }
@@ -19,7 +19,7 @@ function setup() {
 
 /**
  * Displays a bug on a pink background
-*/
+ */
 function draw() {
     // Pink background
     background(255, 150, 150);
@@ -28,6 +28,9 @@ function draw() {
     drawBug();
 }
 
+/**
+ * Draws the full bug
+ */
 function drawBug() {
     drawBody();
     drawLegs();
