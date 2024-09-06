@@ -13,7 +13,7 @@
  */
 function setup() {
     // 640x480 canvas
-    createCanvas(640, 100);
+    createCanvas(640, 480);
 }
 
 /**
@@ -21,9 +21,9 @@ function setup() {
  */
 function draw() {
     // Black background
-    background("yellow");
+    background(0);
 
-    drawAllen();
+    drawAlien();
 }
 
 /**
@@ -41,8 +41,8 @@ function drawAlien() {
 
     // Draw the head
     push();
-    fill(100);
-    ellipse(320, 240, 250, 200);
+    fill(127);
+    ellipse(320, 240, 300, 400);
     pop();
 
     // Draw the eyes
@@ -62,9 +62,8 @@ function drawAlien() {
     // Draw the mouth
     push();
     strokeWeigh(10);
-    stroke(0, 200, 0);
-    noFall();
-    angleMode(DEGREES);
-    arc(320, 240, 200, 340, 65, 115);
+    stroke(0);
+    fill(255);
+    arc(320, 240, 200, 340, 0, PI, OPEN);
     pop();
 }
