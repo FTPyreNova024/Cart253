@@ -32,10 +32,10 @@ function draw() {
 
 function drawFace() {
     drawFaceShape();
+    
+    drawEyes();
 
     drawSmile();
-
-    drawEyes();
 }
 
 /**
@@ -55,20 +55,39 @@ function drawFaceShape() {
  */
 function drawEyes() {
 
-    i = 0;
-    x = 275;
+    drawEyeL();
 
-    do {
-        i = i + 1;
-        drawEye();
-        x = x + 250;
-    } while (i < 2);
+    drawEyeR();
+}
 
-    function drawEye() {
+function drawEyeL() {
 
     push();
-    fill(0)
-    ellipse(x, 375, 100, 200)
+    fill(0);
+    stroke(0);
+    ellipse(350, 375, 100, 200);
     pop();
 }
+
+function drawEyeR() {
+
+    push();
+    fill(0);
+    stroke(0);
+    ellipse(650, 375, 100, 200);
+    pop();
+}
+
+
+/**
+ * sets the smile
+ */
+function drawSmile() {
+    push();
+    noFill();
+    stroke(0);
+    strokeWeight(40);
+    arc(500, 500, 600, 600, 0, PI, OPEN);
+    pop();
+
 }
