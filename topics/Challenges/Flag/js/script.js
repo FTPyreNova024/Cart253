@@ -18,7 +18,7 @@ function setup() {
 }
 
 /**
- * sets the color of the background and the flag
+ * sets the color of the background and the full flag
  */
 function draw() {
 
@@ -61,6 +61,10 @@ function drawWhite() {
      pop();
 }
 
+/**
+ * a section declaring the colors I will use so that I dont have to keep typing the numbers everytime I use them
+ */
+
 const brown = [110, 70, 37];
 
 const gold = [230, 181, 46];
@@ -102,11 +106,13 @@ function drawEagleBody() {
     drawGold();
 
 }
+
 function drawBrown() {
 
         //I dont want any strokes in this sections
         noStroke();
 
+        //Creates the actual body
         push();
         fill(brown);
         ellipse(500, 500, 50)
@@ -121,6 +127,7 @@ function drawBrown() {
         quad(525, 490, 540, 460, 540, 490, 525, 500);
         pop();
 
+        //Creates the wings
         push();
         angleMode(DEGREES);
         fill(brown);
@@ -129,10 +136,14 @@ function drawBrown() {
         pop();
 }
 
+/**
+ * Draws the golden parts of the eagle being the beak and the claws
+ */
 function drawGold() {
     
     noStroke();
 
+    //Draws the shapes for the golden parts
     push();
     fill(gold);
     quad(470, 455, 486, 445, 489, 460, 460, 470);
@@ -140,6 +151,7 @@ function drawGold() {
     ellipse(460, 520, 20);
     pop();
 
+    //Hides pasrt of the circle to make it look like a claw
     push();
     noStroke();
     fill(blank);
@@ -147,6 +159,9 @@ function drawGold() {
     pop();
 }
 
+/**
+ * Draws the cactus the eagle sets on
+ */
 function drawNopal() {
 
     push();
@@ -161,8 +176,12 @@ function drawNopal() {
     pop();
 }
 
+/**
+ * Draws the snake the eagle is eating
+ */
 function drawSnake() {
 
+    //creates the body of the snake
     push();
     angleMode(DEGREES);
     noFill();
@@ -172,6 +191,7 @@ function drawSnake() {
     arc(435, 486, 30, 30, 90, 260);
     pop();
 
+    //creates the head of the snake
     push();
     fill(snake);
     noStroke();
@@ -181,6 +201,9 @@ function drawSnake() {
     pop();
 }
 
+/**
+ * Draws the little island the cactus is on
+ */
 function drawSand() {
     
     push();
