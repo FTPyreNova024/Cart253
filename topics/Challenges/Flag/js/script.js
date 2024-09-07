@@ -33,6 +33,10 @@ function draw() {
     drawNopal();
 
     drawRed();
+
+    drawSnake();
+
+    drawSand();
 }
 
 //draws the left side of the flag
@@ -65,11 +69,7 @@ const nopal = [31, 125, 108];
 
 const snake = [188, 207, 70];
 
-const olivo = [71, 148, 72];
-
 const sand = [191, 176, 80];
-
-const lake = [68, 171, 167];
 
 const blank = [255, 255, 255];
 
@@ -157,6 +157,35 @@ function drawNopal() {
     ellipse(455, 550, 30, 15);
     ellipse(440, 540, 20, 15);
     ellipse(520, 565, 30, 15);
-    quad(500, 565, 496, 565, 490, 590, 480, 580, 600);
+    quad(503, 565, 496, 565, 490, 580, 510, 580, 600);
+    pop();
+}
+
+function drawSnake() {
+
+    push();
+    angleMode(DEGREES);
+    noFill();
+    stroke(snake);
+    strokeWeight(7);
+    arc(440, 520, 30, 40, 260, 130);
+    arc(435, 486, 30, 30, 90, 260);
+    pop();
+
+    push();
+    fill(snake);
+    noStroke();
+    ellipse(440, 470, 15);
+    quad(440, 463, 450, 455, 457, 460, 440, 475);
+    quad(440, 465, 457, 480, 450, 485, 440, 477);
+    pop();
+}
+
+function drawSand() {
+    
+    push();
+    noStroke();
+    fill(sand);
+    quad(520, 580, 530, 600, 470, 600, 480, 580);
     pop();
 }
