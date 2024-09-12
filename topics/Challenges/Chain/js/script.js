@@ -31,12 +31,12 @@ function drawChain() {
      */
 
 let i = 0;
-let x = 0;
+let L = 0;
 
 do { 
     i = i + 1;
     drawChainLink();
-    x = x + 250;
+    L = L + 250;
 } while (i < 5);
 
 function drawChainLink() {
@@ -44,7 +44,7 @@ function drawChainLink() {
     noFill();
     stroke(0);
     strokeWeight(55)
-    ellipse(500, x,275, 375);
+    ellipse(500, L ,275, 375);
     pop();
 }
 }
