@@ -53,7 +53,7 @@ const puck = {
    */
   function moveUser() {
     user.x = mouseX;
-    user.y = mouseY;
+    user.y = mouseY; 
   }
 
   /**
